@@ -1,0 +1,17 @@
+
+<div class ="row">
+  <ul id="thumbnailsList">
+    <li *ngFor="let image of visibleImages" class="list-group-item list-group-item-action list-group-item-success" [draggable]>
+      <img src="{{image.url}}" width="100" >
+    </li>
+    <img src="/src/assets/gifs/descarga.jpeg">
+    
+    <img width="100" src="https://www.kizoa.es/img/e8nZC.gif">   
+  </ul>  
+</div>
+<div class="list-group">
+    <li class="list-group-item list-group-item-action list-group-item-success" [draggable] *ngFor="let item of gifs"
+        [dragClass]="'active'" [dragData]="item" [dragScope]="item.type">
+        {{item.name}}
+    </li>
+</div>
